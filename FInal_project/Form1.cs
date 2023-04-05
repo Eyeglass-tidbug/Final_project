@@ -1,5 +1,8 @@
 using CsvHelper;
+using Microsoft.Office.Interop.Excel;
+using System.Data;
 using System.Globalization;
+using Microsoft.VisualBasic.FileIO;
 
 namespace FInal_project
 {
@@ -175,6 +178,47 @@ namespace FInal_project
                 }
             }
 
+        }
+
+        private void readFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "CSV Files (*.csv)|*.csv|All Files (*.*)|*.*";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog1.FileName;
+                TextFieldParser parser = new TextFieldParser(filePath);
+                parser.TextFieldType = FieldType.Delimited;
+                parser.SetDelimiters(",");
+
+                int idcolum = 0;
+                int firsnamecolum = 1;
+                int lastnamecolum = 2;
+                int leadership = 3;
+                int ontime = 4;
+                int dutifu = 5;
+                int giveusefulinfomation = 6;
+
+                while (!parser.EndOfData)
+                {
+                    string[] fields = parser.ReadFields();
+                    string iddata = fields[idcolum];
+                    string fname = fields[firsnamecolum];
+                    string lname = fields[lastnamecolum];
+                    int Readledership = Int32.Parse(fields[leadership]);
+                    int Readontime = Int32.Parse(fields[ontime]);
+                    int Readdutiful = Int32.Parse(fields[dutifu]);
+                    int Readgiveusefulinfomation = Int32.Parse(fields[giveusefulinfomation]);
+
+                    Person readperson = new Person(iddata, fname, lname, Readledership, Readontime, Readdutiful, Readgiveusefulinfomation);
+                    personBindingSource.Add(readperson);
+                    //string fname = fields[firsnamecolum];
+                    //string lname = fields[lastnamecolum];
+
+                    // Do something with the data
+                }
+
+            }
         }
     }
 }
