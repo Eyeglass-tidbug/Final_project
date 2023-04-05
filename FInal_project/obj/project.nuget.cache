@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4DNnvZ5lJcSYM2tt4aIa2Ngeqv/uqEQ6teA+O+IyK15ReaHqPuZ2aD544iN5GbI4XhsKRF7ixOv2fPrcBsuANw==",
+  "dgSpecHash": "ATw09NbagCC8fg1l+7iXlT/GGh/1lkqy/ymAWomxgZicuMnAO7VYab6FL72AvZWDgXCv1efe+DdSXYduNUG3Wg==",
   "success": true,
-  "projectFilePath": "D:\\Jancode\\Final\\FInal_project\\FInal_project\\FInal_project.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Jancode\\Fianl\\FInal_project\\FInal_project\\FInal_project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\morlo\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

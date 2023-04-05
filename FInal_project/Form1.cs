@@ -1,4 +1,5 @@
-using System.Xml.Linq;
+using CsvHelper;
+using System.Globalization;
 
 namespace FInal_project
 {
@@ -8,11 +9,14 @@ namespace FInal_project
         {
             InitializeComponent();
         }
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            personBindingSource.DataSource = new List<Person>();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(text_id.Text) || string.IsNullOrEmpty(text_firstname.Text) || string.IsNullOrEmpty(text_lastname.Text))
-            return;
+                return;
 
             string in_id = this.text_id.Text;
             string in_firstnamename = this.text_firstname.Text;
@@ -32,12 +36,12 @@ namespace FInal_project
             gridps.firstname = in_firstnamename;
             gridps.lastname = in_lastname;
 
-            
+
         }
 
         private void Remvoe_but_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem item in listView1.SelectedItems) 
+            foreach (ListViewItem item in listView1.SelectedItems)
             {
                 listView1.Items.Remove(item);
             }
@@ -45,7 +49,7 @@ namespace FInal_project
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(listView1.SelectedItems.Count > 0)
+            if (listView1.SelectedItems.Count > 0)
             {
                 string ID = listView1.SelectedItems[0].SubItems[0].Text;
                 string fname = listView1.SelectedItems[0].SubItems[1].Text;
@@ -68,15 +72,15 @@ namespace FInal_project
             textBox1.Clear(); textBox2.Clear(); textBox3.Clear();
             listView1.SelectedItems.Clear();
             l1.Checked = false; l2.Checked = false;
-            l3.Checked= false; d5.Checked = false;
-            d4.Checked= false; d3.Checked = false;
-            d2.Checked= false; d1.Checked= false;
-            g5.Checked= false; l4.Checked= false;
-            l5.Checked= false; o5.Checked= false;
-            o4.Checked= false; o3.Checked= false;
-            o2.Checked= false; o1.Checked= false;
-            g4.Checked= false;g3.Checked= false;
-            g2.Checked= false;g1.Checked= false;
+            l3.Checked = false; d5.Checked = false;
+            d4.Checked = false; d3.Checked = false;
+            d2.Checked = false; d1.Checked = false;
+            g5.Checked = false; l4.Checked = false;
+            l5.Checked = false; o5.Checked = false;
+            o4.Checked = false; o3.Checked = false;
+            o2.Checked = false; o1.Checked = false;
+            g4.Checked = false; g3.Checked = false;
+            g2.Checked = false; g1.Checked = false;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -117,11 +121,58 @@ namespace FInal_project
             if (g4.Checked) { g = 4; }
             if (g5.Checked) { g = 5; }
 
-            if (l == 0 | o == 0 | d==0 | g==0) { return; }
+            if (l == 0 | o == 0 | d == 0 | g == 0) { return; }
             else
             {
                 Person person = new Person(id, fname, lname, l, o, d, g);
                 personBindingSource.Add(person);
+            }
+            //clear
+            foreach (ListViewItem item in listView1.SelectedItems)
+            {
+                listView1.Items.Remove(item);
+            }
+            textBox1.Clear(); textBox2.Clear(); textBox3.Clear();
+            listView1.SelectedItems.Clear();
+            l1.Checked = false; l2.Checked = false;
+            l3.Checked = false; d5.Checked = false;
+            d4.Checked = false; d3.Checked = false;
+            d2.Checked = false; d1.Checked = false;
+            g5.Checked = false; l4.Checked = false;
+            l5.Checked = false; o5.Checked = false;
+            o4.Checked = false; o3.Checked = false;
+            o2.Checked = false; o1.Checked = false;
+            g4.Checked = false; g3.Checked = false;
+            g2.Checked = false; g1.Checked = false;
+        }
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //savefile
+            //ssl 1 doens't work cansave file **no header no data**
+            //ss3 work but doesn't contect to datasouce
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "CSV file (*.csv)|*.csv";
+            saveFileDialog1.Title = "Save CSV file";
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog1.FileName;
+
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                        {
+                            writer.Write(dataGridView1.Rows[i].Cells[j].Value.ToString());
+                            if (j != dataGridView1.Columns.Count - 1)
+                            {
+                                writer.Write(",");
+                            }
+                        }
+                        writer.WriteLine("");
+                    }
+                }
             }
 
         }

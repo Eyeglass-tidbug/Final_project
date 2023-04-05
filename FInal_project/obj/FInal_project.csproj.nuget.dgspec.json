@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Jancode\\Final\\FInal_project\\FInal_project\\FInal_project.csproj": {}
+    "D:\\Jancode\\Fianl\\FInal_project\\FInal_project\\FInal_project.csproj": {}
   },
   "projects": {
-    "D:\\Jancode\\Final\\FInal_project\\FInal_project\\FInal_project.csproj": {
+    "D:\\Jancode\\Fianl\\FInal_project\\FInal_project\\FInal_project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Jancode\\Final\\FInal_project\\FInal_project\\FInal_project.csproj",
+        "projectUniqueName": "D:\\Jancode\\Fianl\\FInal_project\\FInal_project\\FInal_project.csproj",
         "projectName": "FInal_project",
-        "projectPath": "D:\\Jancode\\Final\\FInal_project\\FInal_project\\FInal_project.csproj",
+        "projectPath": "D:\\Jancode\\Fianl\\FInal_project\\FInal_project\\FInal_project.csproj",
         "packagesPath": "C:\\Users\\morlo\\.nuget\\packages\\",
-        "outputPath": "D:\\Jancode\\Final\\FInal_project\\FInal_project\\obj\\",
+        "outputPath": "D:\\Jancode\\Fianl\\FInal_project\\FInal_project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\morlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -44,6 +44,14 @@
             this.text_id = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leadershipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ontimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dutifulDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giveusefulinfomationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -73,22 +81,18 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leadershipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ontimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dutifulDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giveusefulinfomationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -102,9 +106,9 @@
             this.groupBox1.Controls.Add(this.ADD_but);
             this.groupBox1.Controls.Add(this.text_firstname);
             this.groupBox1.Controls.Add(this.text_id);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 41);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(269, 426);
+            this.groupBox1.Size = new System.Drawing.Size(269, 397);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -209,6 +213,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
@@ -219,9 +224,9 @@
             this.groupBox2.Controls.Add(this.textBox3);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Location = new System.Drawing.Point(287, 12);
+            this.groupBox2.Location = new System.Drawing.Point(287, 41);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(519, 426);
+            this.groupBox2.Size = new System.Drawing.Size(519, 397);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
@@ -229,6 +234,8 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -245,6 +252,73 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(498, 167);
             this.dataGridView1.TabIndex = 15;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 51;
+            // 
+            // firsnameDataGridViewTextBoxColumn
+            // 
+            this.firsnameDataGridViewTextBoxColumn.DataPropertyName = "Firsname";
+            this.firsnameDataGridViewTextBoxColumn.HeaderText = "Firsname";
+            this.firsnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.firsnameDataGridViewTextBoxColumn.Name = "firsnameDataGridViewTextBoxColumn";
+            this.firsnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.firsnameDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // lastnameDataGridViewTextBoxColumn
+            // 
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "Lastname";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "Lastname";
+            this.lastnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            this.lastnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastnameDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // leadershipDataGridViewTextBoxColumn
+            // 
+            this.leadershipDataGridViewTextBoxColumn.DataPropertyName = "Leadership";
+            this.leadershipDataGridViewTextBoxColumn.HeaderText = "Leadership";
+            this.leadershipDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.leadershipDataGridViewTextBoxColumn.Name = "leadershipDataGridViewTextBoxColumn";
+            this.leadershipDataGridViewTextBoxColumn.ReadOnly = true;
+            this.leadershipDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // ontimeDataGridViewTextBoxColumn
+            // 
+            this.ontimeDataGridViewTextBoxColumn.DataPropertyName = "Ontime";
+            this.ontimeDataGridViewTextBoxColumn.HeaderText = "Ontime";
+            this.ontimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ontimeDataGridViewTextBoxColumn.Name = "ontimeDataGridViewTextBoxColumn";
+            this.ontimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ontimeDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // dutifulDataGridViewTextBoxColumn
+            // 
+            this.dutifulDataGridViewTextBoxColumn.DataPropertyName = "Dutiful";
+            this.dutifulDataGridViewTextBoxColumn.HeaderText = "Dutiful";
+            this.dutifulDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dutifulDataGridViewTextBoxColumn.Name = "dutifulDataGridViewTextBoxColumn";
+            this.dutifulDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dutifulDataGridViewTextBoxColumn.Width = 83;
+            // 
+            // giveusefulinfomationDataGridViewTextBoxColumn
+            // 
+            this.giveusefulinfomationDataGridViewTextBoxColumn.DataPropertyName = "Giveusefulinfomation";
+            this.giveusefulinfomationDataGridViewTextBoxColumn.HeaderText = "Giveusefulinfomation";
+            this.giveusefulinfomationDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.giveusefulinfomationDataGridViewTextBoxColumn.Name = "giveusefulinfomationDataGridViewTextBoxColumn";
+            this.giveusefulinfomationDataGridViewTextBoxColumn.ReadOnly = true;
+            this.giveusefulinfomationDataGridViewTextBoxColumn.Width = 179;
+            // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataSource = typeof(FInal_project.Person);
             // 
             // button2
             // 
@@ -563,72 +637,32 @@
             this.textBox2.Size = new System.Drawing.Size(173, 27);
             this.textBox2.TabIndex = 8;
             // 
-            // personBindingSource
+            // menuStrip1
             // 
-            this.personBindingSource.DataSource = typeof(FInal_project.Person);
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(818, 28);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // idDataGridViewTextBoxColumn
+            // menuToolStripMenuItem
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 125;
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Text = "Menu";
             // 
-            // firsnameDataGridViewTextBoxColumn
+            // saveToolStripMenuItem
             // 
-            this.firsnameDataGridViewTextBoxColumn.DataPropertyName = "Firsname";
-            this.firsnameDataGridViewTextBoxColumn.HeaderText = "Firsname";
-            this.firsnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.firsnameDataGridViewTextBoxColumn.Name = "firsnameDataGridViewTextBoxColumn";
-            this.firsnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.firsnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // lastnameDataGridViewTextBoxColumn
-            // 
-            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "Lastname";
-            this.lastnameDataGridViewTextBoxColumn.HeaderText = "Lastname";
-            this.lastnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
-            this.lastnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lastnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // leadershipDataGridViewTextBoxColumn
-            // 
-            this.leadershipDataGridViewTextBoxColumn.DataPropertyName = "Leadership";
-            this.leadershipDataGridViewTextBoxColumn.HeaderText = "Leadership";
-            this.leadershipDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.leadershipDataGridViewTextBoxColumn.Name = "leadershipDataGridViewTextBoxColumn";
-            this.leadershipDataGridViewTextBoxColumn.ReadOnly = true;
-            this.leadershipDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ontimeDataGridViewTextBoxColumn
-            // 
-            this.ontimeDataGridViewTextBoxColumn.DataPropertyName = "Ontime";
-            this.ontimeDataGridViewTextBoxColumn.HeaderText = "Ontime";
-            this.ontimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ontimeDataGridViewTextBoxColumn.Name = "ontimeDataGridViewTextBoxColumn";
-            this.ontimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ontimeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dutifulDataGridViewTextBoxColumn
-            // 
-            this.dutifulDataGridViewTextBoxColumn.DataPropertyName = "Dutiful";
-            this.dutifulDataGridViewTextBoxColumn.HeaderText = "Dutiful";
-            this.dutifulDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dutifulDataGridViewTextBoxColumn.Name = "dutifulDataGridViewTextBoxColumn";
-            this.dutifulDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dutifulDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // giveusefulinfomationDataGridViewTextBoxColumn
-            // 
-            this.giveusefulinfomationDataGridViewTextBoxColumn.DataPropertyName = "Giveusefulinfomation";
-            this.giveusefulinfomationDataGridViewTextBoxColumn.HeaderText = "Giveusefulinfomation";
-            this.giveusefulinfomationDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.giveusefulinfomationDataGridViewTextBoxColumn.Name = "giveusefulinfomationDataGridViewTextBoxColumn";
-            this.giveusefulinfomationDataGridViewTextBoxColumn.ReadOnly = true;
-            this.giveusefulinfomationDataGridViewTextBoxColumn.Width = 125;
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -637,13 +671,17 @@
             this.ClientSize = new System.Drawing.Size(818, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -652,8 +690,10 @@
             this.groupBox6.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -718,5 +758,8 @@
         private DataGridViewTextBoxColumn dutifulDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn giveusefulinfomationDataGridViewTextBoxColumn;
         private BindingSource personBindingSource;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem menuToolStripMenuItem;
+        private ToolStripMenuItem saveToolStripMenuItem;
     }
 }
