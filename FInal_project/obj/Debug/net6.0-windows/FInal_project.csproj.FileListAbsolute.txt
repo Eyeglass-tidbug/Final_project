@@ -1,0 +1,17 @@
+D:\Jancode\Final\FInal_project\FInal_project\bin\Debug\net6.0-windows\FInal_project.exe
+D:\Jancode\Final\FInal_project\FInal_project\bin\Debug\net6.0-windows\FInal_project.deps.json
+D:\Jancode\Final\FInal_project\FInal_project\bin\Debug\net6.0-windows\FInal_project.runtimeconfig.json
+D:\Jancode\Final\FInal_project\FInal_project\bin\Debug\net6.0-windows\FInal_project.dll
+D:\Jancode\Final\FInal_project\FInal_project\bin\Debug\net6.0-windows\FInal_project.pdb
+D:\Jancode\Final\FInal_project\FInal_project\obj\Debug\net6.0-windows\FInal_project.csproj.AssemblyReference.cache
+D:\Jancode\Final\FInal_project\FInal_project\obj\Debug\net6.0-windows\FInal_project.Form1.resources
+D:\Jancode\Final\FInal_project\FInal_project\obj\Debug\net6.0-windows\FInal_project.csproj.GenerateResource.cache
+D:\Jancode\Final\FInal_project\FInal_project\obj\Debug\net6.0-windows\FInal_project.GeneratedMSBuildEditorConfig.editorconfig
+D:\Jancode\Final\FInal_project\FInal_project\obj\Debug\net6.0-windows\FInal_project.AssemblyInfoInputs.cache
+D:\Jancode\Final\FInal_project\FInal_project\obj\Debug\net6.0-windows\FInal_project.AssemblyInfo.cs
+D:\Jancode\Final\FInal_project\FInal_project\obj\Debug\net6.0-windows\FInal_project.csproj.CoreCompileInputs.cache
+D:\Jancode\Final\FInal_project\FInal_project\obj\Debug\net6.0-windows\FInal_project.dll
+D:\Jancode\Final\FInal_project\FInal_project\obj\Debug\net6.0-windows\refint\FInal_project.dll
+D:\Jancode\Final\FInal_project\FInal_project\obj\Debug\net6.0-windows\FInal_project.pdb
+D:\Jancode\Final\FInal_project\FInal_project\obj\Debug\net6.0-windows\FInal_project.genruntimeconfig.cache
+D:\Jancode\Final\FInal_project\FInal_project\obj\Debug\net6.0-windows\ref\FInal_project.dll
