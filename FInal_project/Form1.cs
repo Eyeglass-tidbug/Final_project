@@ -191,6 +191,7 @@ namespace FInal_project
                 parser.TextFieldType = FieldType.Delimited;
                 parser.SetDelimiters(",");
 
+                //selecet colum of data
                 int idcolum = 0;
                 int firsnamecolum = 1;
                 int lastnamecolum = 2;
@@ -212,6 +213,7 @@ namespace FInal_project
 
                     Person readperson = new Person(iddata, fname, lname, Readledership, Readontime, Readdutiful, Readgiveusefulinfomation);
                     personBindingSource.Add(readperson);
+                    //this doen't work for some readsuon
                     //string fname = fields[firsnamecolum];
                     //string lname = fields[lastnamecolum];
 
